@@ -1,0 +1,95 @@
+LCD Command List (with I2cLcd)
+
+1. lcd.putstr("text")
+
+Description: Displays a string on the LCD.
+
+Example:
+
+lcd.putstr("Hello World")
+
+
+2. lcd.clear()
+
+Description: Clears the screen and resets the cursor to the top-left.
+
+Example:
+
+lcd.clear()
+
+
+3. lcd.move_to(column, row)
+
+Description: Moves the cursor to a specific position (0-indexed).
+
+Example:
+
+lcd.move_to(5, 1)  # Column 5, Row 1
+
+
+4. lcd.backlight_on() / lcd.backlight_off()
+
+Description: Turns the LCD backlight ON or OFF.
+
+Example:
+
+lcd.backlight_off()
+time.sleep(1)
+lcd.backlight_on()
+
+
+5. lcd.hide_cursor() / lcd.show_cursor()
+
+Description: Hides or shows the blinking cursor.
+
+Example:
+
+lcd.show_cursor()
+
+
+6. lcd.blink_cursor_on() / lcd.blink_cursor_off()
+
+Description: Enables or disables blinking cursor.
+
+Example:
+
+lcd.blink_cursor_on()
+
+
+7. lcd.display_on() / lcd.display_off()
+
+Description: Turns the display on or off without clearing it.
+
+Example:
+
+lcd.display_off()
+
+
+8. lcd.create_char(location, pattern)
+
+Description: Creates a custom character at a memory slot (0–7).
+
+pattern must be a list of 8 integers (5-bit each).
+
+Example:
+
+heart = [0b00000,
+         0b01010,
+         0b11111,
+         0b11111,
+         0b11111,
+         0b01110,
+         0b00100,
+         0b00000]
+lcd.create_char(0, heart)
+lcd.putchar(chr(0))  # Display custom char
+
+
+9. lcd.putchar(char)
+
+Description: Writes a single character to the LCD.
+
+Example:
+
+lcd.putchar("A")
+
