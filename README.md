@@ -8,3 +8,7 @@ copy and paste code or download raw file
 use a pi pico or a pi pico w for use a ep-0172
 use micropython in your pico with this link : https://micropython.org/download/?vendor=Raspberry%20Pi or use thonny
 use thonny (thonny.org) or pycharm (thonny is recomended)
+
+
+
+My youtube channel (french) :  	www.youtube.com/@Filouslee-mf
